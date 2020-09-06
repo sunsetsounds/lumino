@@ -212,17 +212,39 @@
 										</p>
 											<hr>
 											<h3>Sustainable Materials</h3>
+										<script>
+											var coll = document.getElementsByClassName("collapsible");
+											var i;
+
+											for (i = 0; i < coll.length; i++) {
+											  coll[i].addEventListener("click", function() {
+											    this.classList.toggle("active");
+											    var content = this.nextElementSibling;
+											    if (content.style.maxHeight){
+											      content.style.maxHeight = null;
+											    } else {
+											      content.style.maxHeight = content.scrollHeight + "px";
+											    }
+											  });
+											}
+											</script>
 											<p>
 											Our choice in 3D printing materials is important to the sustainable process. The three materials we use on Lumino are
 											<b>PLA/Wood PLA</b> (Polyactic Acid), <b>PETG</b> (Polyethylene Terephthalate Glycol), and <b>TPU</b>(Thermoplastic Polyurethane).
+											</p>
 											<br>
 											<br>
+											<button class="collapsible">Wood PLA</button>
+											<div class="inside">
+											<p>
 											Wood PLA,
 											which is used on Lumino +, is a special filament made with 20% recycled wood fibers and 80% PLA. PLA is a plant-based
 											and is an <b>entirely renewable resouce</b> and is <b>biodegradable</b>. This makes Wood PLA a very sustainable choice in material in addition
 											to being <b>recyclable and industrially compostable</b>. PLA has very high strength, but it is not very ductle, leading to
 											lower durability compared to PETG. <u>This does mean that Lumino, not using PLA in favor of PETG, is more durable and shock resistant
 											than compared to Lumino +.</u>
+										</p>
+										</div>
 											<br>
 											<br>
 											PETG, used on the bottom half of Lumino + and the entirety of Lumino's enclosure, is a strong and flexible material,
