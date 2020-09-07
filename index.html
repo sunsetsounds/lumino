@@ -106,20 +106,19 @@
 							</ul>
 							<p style="font-size:.7rem">*50 hour battery estimate is for Lumino+, Lumino has 25 hours of estimated playtime.
 							<p>This is just a quick rundown on some of Lumino's accomplishments we were able to achieve with advanced engineering techniques.
-								Full specs below for nerds like us! (we love nerds <3)
+							An exhaustive specification sheet is available below!
 							</p>
-							<ul class="actions">
+							<ul class="actions" style="margin-bottom:16px;">
 								<li><a target="none" href="files/Lumino Specification Sheet.pdf" class="button primary large">Specifications</a></li>
 								<li><a target="none" href="files/Lumino Manual" class="button large">Manual</a></li>
 							</ul>
 							<p style="font-size:.7rem">Clicking these buttons will open a new tab!</p>
 						</div>
 					</section>
-
 				<!-- Section -->
 					<section>
 						<header>
-							<h2>Audio Architecture</h2>
+							<h2><b>Audio Architecture</b></h2>
 						</header>
 						<div class="content">
 							<h3>Drivers Built for HiFi</h3>
@@ -128,9 +127,9 @@
 						the midrange. Finally, a <b>1-1/8 inch soft dome neodymium tweeter</b> brings <b>detail and clarity</b> unlike any other portable system, complementing the woofer magnificently.
 						This all means that Lumino brings the whole soundstage to you, with big sound (103dB) in a portable package.
 						<div class="gallery">
-							<a href="images/gallery/full/nd105+nd28f.jpg" class="landscape"><img src="images/gallery/thumbs/nd105+nd28f.jpg" alt="" /></a>
-							<a href="images/gallery/full/driverRemoved.jpg"><img src="images/gallery/thumbs/driverRemoved.jpg" alt="" /></a>
-							<a href="images/gallery/full/luminoSideView.jpg"><img src="images/gallery/thumbs/luminoSideView.jpg" alt="" /></a>
+							<a href="images/gallery/fulls/nd105+nd28f.jpg" class="landscape"><img src="images/gallery/thumbs/nd105+nd28f.jpg" alt="" /></a>
+							<a href="images/gallery/fulls/driverRemoved.jpg"><img src="images/gallery/thumbs/driverRemoved.jpg" alt="" /></a>
+							<a href="images/gallery/fulls/luminoSideView.jpg"><img src="images/gallery/thumbs/luminoSideView.jpg" alt="" /></a>
 
 						</div>
 
@@ -164,10 +163,10 @@
 					<h2><b>Connectivity and Power</b></h2>
 					</header>
 					<div class="content">
-						<p> <b>More than just wireless bluetooth.</b> Lumino features special bluetooth codecs that limit distortion and lower latency
+						<p> <b>More than just wireless Bluetooth.</b> Lumino features special Bluetooth codecs that limit distortion and lower latency
 							 in the audio supply chain, supporting <b>APTx, APTx LL, and AAC codecs</b>.
 							 In addition, Lumino includes a standard 3.5mm jack so you can stream music from almost any device. As a bonus feature, this 3.5mm jack
-							 serves as an output, <b>allowing Lumino to drive other speakers</b> and audio systems when you stream through bluetooth. See our guide <a href="">here</a>
+							 serves as an output, <b>allowing Lumino to drive other speakers</b> and audio systems when you stream through Bluetooth. See our guide <a href="">here</a>
 							 <br><br>
 							 Lumino + is powered by a 12V 5000mAh (2380mAh in Lumino) li-ion battery pack. This gives our speaker an effective playtime of <b>over 50 hours</b> (25 hours for Lumino). The included
 							 AC adapter charges Lumino + in about <b>1.5 hours</b>. This means that you can comfortably use Lumino anywhere to play music for hours on end without having to worry about
@@ -212,48 +211,69 @@
 										</p>
 											<hr>
 											<h3>Sustainable Materials</h3>
-										<script>
-											var coll = document.getElementsByClassName("collapsible");
-											var i;
+											<script>
+											function collapse(args,args2,args3) {
+											  var x = document.getElementById(args);
+												var y = document.getElementById(args2);
+												var z = document.getElementById(args3);
+											  if (x.style.opacity == "0") {
+													y.style.opacity = "0";
+													z.style.opacity = "0";
+											    x.style.opacity = "1";
+													y.style.height = "0";
+													z.style.height = "0";
+											    x.style.height = "100%";
 
-											for (i = 0; i < coll.length; i++) {
-											  coll[i].addEventListener("click", function() {
-											    this.classList.toggle("active");
-											    var content = this.nextElementSibling;
-											    if (content.style.maxHeight){
-											      content.style.maxHeight = null;
-											    } else {
-											      content.style.maxHeight = content.scrollHeight + "px";
-											    }
-											  });
+											  } else {
+													x.style.opacity = "0";
+											    x.style.height = "0";
+											  }
+
 											}
 											</script>
 											<p>
 											Our choice in 3D printing materials is important to the sustainable process. The three materials we use on Lumino are
 											<b>PLA/Wood PLA</b> (Polyactic Acid), <b>PETG</b> (Polyethylene Terephthalate Glycol), and <b>TPU</b>(Thermoplastic Polyurethane).
+											Click below to see why we chose each filament/material!
 											</p>
-											<br>
-											<br>
-											<button class="collapsible">Wood PLA</button>
-											<div class="inside">
-											<p>
+											<ul class="actions" style="margin-bottom: 0;">
+												<li><button onclick="collapse('woodpla','petg','tpu')" class="large">Wood PLA</button></li>
+												<li><button onclick="collapse('petg','woodpla','tpu')" class="large">PETG</button></li>
+												<li><button onclick="collapse('tpu','woodpla','petg')" class="large">TPU</button></li>
+											</ul>
+											<div id="woodpla" class="collapse" style="height: 0; opacity: 0;">
+												<hr>
+											<p style="margin-bottom: 0;">
 											Wood PLA,
 											which is used on Lumino +, is a special filament made with 20% recycled wood fibers and 80% PLA. PLA is a plant-based
 											and is an <b>entirely renewable resouce</b> and is <b>biodegradable</b>. This makes Wood PLA a very sustainable choice in material in addition
 											to being <b>recyclable and industrially compostable</b>. PLA has very high strength, but it is not very ductle, leading to
 											lower durability compared to PETG. <u>This does mean that Lumino, not using PLA in favor of PETG, is more durable and shock resistant
 											than compared to Lumino +.</u>
-										</p>
-										</div>
-											<br>
-											<br>
+											</p>
+
+											</div>
+
+											<div id="petg" class="collapse" style="height: 0; opacity: 0;">
+												<hr>
+												<p style="margin-bottom: 0;">
 											PETG, used on the bottom half of Lumino + and the entirety of Lumino's enclosure, is a strong and flexible material,
 											making it more effective at protection when compared to PLA. Much like PLA, PETG is <b>recyclable</b> but is not biodegradable
 											because it is <b>oil based</b>. Still being recyclable, PETG is still a sustainable choice of materials when treated properly
 											and we are currently working on implementing a biodegradable PETG solution!
 										</p>
+										</div>
 
+
+										<div id="tpu" class="collapse" style="height: 0; opacity: 0;">
+											<hr>
+											<p style="margin-bottom: 0;">
+											TPU is an extremely flexible filament that is used for Lumino's handle. This material with its high elasticity, shear strength, and flexural strength
+											give the handle a high quality and robust feel. TPU is sustainable choice because of its decent biodegradability. This material is recyclable, but Sunset
+											Sounds is working on a plant-based TPU alternative to allow for industrial compostability!
+										</p>
 									</div>
+									<hr>
 								</section>
 
 							<!-- Section -->
@@ -296,14 +316,14 @@
 
 										</header>
 										<div class="content">
-										<h3>Features: Lumino | Lumino +</h3>
+										<h3>Features and Pricing: Lumino | Lumino +</h3>
 										<p>Lumino and Lumino + are portable HiFi speakers dedicated to delivering superior sound quality, but they
 										do have their differences! Lumino + features 3D printed wood and more than double the battery size of the standard Lumino.</p>
 										<table style="text-align:center;">
 											<tr>
 												<td> </td>
-												<td><h3>Lumino</h3></td>
-												<td><h3>Lumino +</h3></td>
+												<td><h3 style="margin:0;">Lumino</h3></td>
+												<td><h3 style="margin:0;">Lumino +</h3></td>
 											</tr>
 											<tr>
 												<td>3D Printed</td>
@@ -353,17 +373,14 @@
 
 										</table>
 										<hr>
-
-                   <h3><b>Pricing: Lumino | Lumino +</b></h3>
-
-									 <table>
-										 <tr style="text-align:left; background-color:white; border:none;">
-											 <td><h2>Lumino</h2></td>
-											 <td><h2>Lumino +</h2></td>
+									 <table class=>
+										 <tr style="text-align:left; background-color:white; border-bottom:none;">
+											 <td style="padding-bottom:0;"><h3 style="font-size:2rem; margin:0;">Lumino</h3></td>
+											 <td style="padding-bottom:0;"><h3 style="font-size:2rem; margin:0;">Lumino+</h3></td>
 										 </tr>
 										 <tr style="text-align:center; background-color:white; border:none;">
-											 <td><h2>$329.99</h2></td>
-											 <td><h2>$399.99</h2></td>
+											 <td style="padding-bottom:0;"><h3 style="font-size:1.2rem; margin:0;">$329.99</h3></td>
+											 <td style="padding-bottom:0;"><h3 style="font-size:1.2rem; margin:0;">$399.99</h3></td>
 										 </tr>
 									 </table>
 										</div>
@@ -386,8 +403,8 @@
 							<p>
 							Lumino and Lumino+ are 3D printed, hand assembled, and hand finished speakers brought to you by our <a href="https://sunsetsoundssf.com/#team" target="none">
 							passionate, talented team</a>. They take over <b>72 hours</b> of printing and processing time,
-							and of course, they aren't made by robots, so sometimes delays may occur (but we will notify you!). You can expect your Lumino or Lumino + to arrive
-							<b>two weeks</b> after ordering on average!
+							and of course, they aren't made by robots, so sometimes delays may occur (but we will notify you!). You can expect your Lumino or Lumino + to arrive approximately
+							<b>two weeks</b> after ordering!
 							 We will keep you updated with the build progress
 							of your specific Lumino or Lumino +, but if you ever have any concerns about your speaker or its status, feel free to contact us!
 						</p>
@@ -690,7 +707,7 @@ print 'Sorted in ' + i + ' iterations.';</code></pre>
 									<li><input type="submit" value="Send Message" class="button primary" /></li>
 								</ul>
 							</form>
-							<p>Clicking send message should open your mailing service and prepare an email. If this does not work please email us
+							<p>Clicking "Send Message" should open your mailing service and prepare an email. If this does not work please email us
 								at <strong>contact@sunsetsoundssf.com</strong> instead of using this form. Alternatively, message us on any
 							social media linked below for a quick and efficient conversation!
 						</div>
